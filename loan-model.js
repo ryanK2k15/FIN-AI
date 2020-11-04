@@ -1,6 +1,6 @@
 const tf = require('@tensorflow/tfjs-node');
 
-const modelUrl = 'http://localhost:5000/tfjs_loan_model/model.json';
+const modelUrl = https://fin-ai-cit.herokuapp.com/tfjs_loan_model/model.json';
 
 let model;
 
