@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>FINAI</title>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="mainStyle.css">
+</head>
+<body>
+<div id="logo">
+        <img src="Coin.png" alt="logo">
+</div>
+<div id="log-in">
+        <p>Hello User!</p>
+</div>
+<div class="navigation">
+        <h3>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/value">House Value</a></li>
+        </h3>
+</div>
+<div class="menu" >
+        USEFULL LINKS
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+        <a href="#">Link 5</a>
+        <a href="#">Link 6</a>
+        <a href="#">Link 7</a>
+        <a href="#">Link 8</a>
+</div>
+<div class="mainForm">
+        <h3>Check your credit accessibility</h3>
+        <form id="calcForm" action="calculator" method="post">
+                <p>
+                        <label>GENDER</label>
+                        <input type="radio" name="gender" value="1" id="gender" checked="checked" required> Male
+                        <input type="radio" name="gender" value="0" > Female
+                </p>
+                <p>
+                        <label>ARE YOU MARRIED</label>
+                        <input type="radio" name="married" value="1" id="married" required> Yes
+                        <input type="radio" name="married" value="0"> No
+                </p>
+                <p>
+                        <label>ARE YOU GRADUATED</label>
+                        <input type="radio" name="graduated" value="1" id="graduated" required> Yes
+                        <input type="radio" name="graduated" value="0"> No
+                </p>
+                <p>
+                        <label>ARE YOU SELF EMPLOYED</label>
+                        <input type="radio" name="selfEmployed" value="1" id="selfEmployed" required> Yes
+                        <input type="radio" name="selfEmployed" value="0"> No
+                </p>
+                <p>
+                        <label>WHAT IS YOUR INCOME</label>
+                        <input type="text" name="income" id="income" pattern="\d+(\.\d{2})?" required>
+                </p>
+                <p>
+                        <label>CO APP INCOME</label>
+                        <input type="text" name="coIncome" id="coIncome" pattern="\d+(\.\d{2})?" required>
+                </p>
+                <p>
+                        <label>LOAN AMOUNT</label>
+                        <input type="text" name="amount" id="amount" pattern="\d+(\.\d{2})?" required>
+                </p>
+                <p>
+                        <label>LOAN TIME</label>
+                        <input type="number" name="time" id="time" pattern="\d+(\.\d{2})?" required>
+                </p>
+                <p>
+                        <label>DO YOU HAVE CREDIT HISTORY</label>
+                        <input type="radio" name="creditHistory" value="1" id="creditHistory" required> Yes
+                        <input type="radio" name="creditHistory" value="0"> No
+                </p>
+                <p>
+                        <label>PROPERTY AREA</label>
+                        <input type="radio" name="area" value="1" id="area" checked="checked" required> Rural
+                        <input type="radio" name="area" value="2" > Semi Urban
+                        <input type="radio" name="area" value="3" > Urban
+                </p>
+				<p>
+                        <label>Number of Dependants</label>
+                        <input type="number" name="dependents" id="dependents" pattern="\d+(\.\d{2})?" required>
+                </p>
+                <p class="full">
+                        <button id="submit">Submit</button>
+                </p>
+                
+        </form>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase.js"></script>
+<script src="calculator.js"></script>
+<div class="footer">
+        <li><i class="fa fa-road"></i> 1 Patrick Street</li>
+        <li><i class="fa fa-phone"></i> (353)1111111</li>
+        <li><i class="fa fa-envelope"></i> FINAI@mycit.ie</li>
+</div>
+</body>
+</html>
