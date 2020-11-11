@@ -3,7 +3,8 @@ const bodyParser = require("body-parser");
 const express = require("express");
 const admin = require("firebase-admin");
 var model = require('./loan-model.js');// require model from loan-model.js
-
+var houseModel = require('./house-model.js');// require model from loan-model.js
+const tf = require('@tensorflow/tfjs-node');
 const PORT = process.env.PORT || 5000;
 const app = express();
 app.use(express.static(__dirname + '/public'));
@@ -67,6 +68,33 @@ app.get("/home", function (req, res) {
 app.get("/value", function (req, res) {
     res.render("value.html");
 });
+//post method that takes data from form and uses house model to make a prediction - edited by Ryan 
+app.post('/value',function(req,res){
+	console.log("POST");
+   var bedrooms = parseFloat(req.body.bedrooms);
+   var bathrooms = parseFloat(req.body.bathrooms);
+   var sqfliving = parseFloat(req.body.sqfliving);
+   var sqflot = parseFloat(req.body.sqflot);
+   var floors = parseFloat(req.body.floors);
+   var waterfront = parseFloat(req.body.waterfront);
+   var view = parseFloat(req.body.view);
+   var condition = parseFloat(req.body.condition);
+   var yrBuilt = parseFloat(req.body.yrBuilt);
+   var renovated = parseFloat(req.body.renovated);
+   var aboveSqFt = parseFloat(req.body.aboveSqFt);
+   var belowSqFt = parseFloat(req.body.belowSqFt);
+   var waterfront = parseFloat(req.body.waterfront);	
+   
+   var sample = [bedrooms, bathrooms, sqfliving, sqflot, floors, waterfront, view, condition, aboveSqFt, belowSqFt, yrBuilt, renovated]
+	console.log(sample);
+	h = houseModel.loadModel();
+	h.then(model => {
+		let prediction= model.predict(tf.tensor(sample, [1, sample.length])).arraySync();
+		console.log(prediction);
+		res.send(prediction[0])	
+	});  
+
+}); //end post method 
 
 app.get("/SignUp", function (req, res) {
     res.render("signup.html");
