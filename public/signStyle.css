@@ -1,0 +1,101 @@
+body {
+    margin: 0px;
+    font-family: 'segoe ui';
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #000000;
+    top: 0;
+    width: 100%;
+}
+
+.navbar a {
+    float: right;
+    display: block;
+    color: #eeeeee;
+    padding: 25px 5% 15px 5%;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #1c87c9;
+}
+
+.navbar h1 {
+    color: #eeeeee;
+    padding-left: 5%;
+    float: left;
+    text-align: left;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem;
+}
+.image1{
+    width: 100px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #333333;
+    width: 90%;
+    margin: 0 5% 0% 5%;
+    float: left;
+}
+.footer h1 {
+    float: left;
+    width: 15%;
+    align: left;
+    text-align: left;
+    display: block;
+    color: #eeeeee;
+    padding: 5px 5px 5px 5px;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+.container {
+
+    text-align: center;
+    background-color: #3a4149;
+    width: 50%;
+    margin: 5% 25%;
+    padding: 20px 5% 20px 5%;
+}
+.container h1 {
+    color: #f4f4f4;
+    font-family: 'Trocchi', serif;
+    font-size: 45px;
+    font-weight: normal;
+    line-height: 48px; margin: 0;
+}
+.container label {
+    font-size: 30px;
+    height: auto;
+}
+
+.container input {
+    font-size: 30px;
+    width: auto;
+    height: auto;
+}
+input[type="radio"] {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+.login{}
+.login input{
+    font-size: 30px;
+    width: 250px;
+    height: 70px;
+    padding-left: 10px;
+}

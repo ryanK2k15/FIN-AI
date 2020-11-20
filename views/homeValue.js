@@ -18,7 +18,7 @@ var messagesRef = firebase.database().ref('valuecheck');
 document.getElementById('valueForm').addEventListener('submit', submitForm);
 
 function submitForm(e){
-    e.preventDefault();
+   // e.preventDefault();
 
     var bedrooms = getInputVal("bedrooms");
     var bathrooms = getInputVal("bathrooms");

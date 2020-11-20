@@ -67,3 +67,26 @@ btnLog.addEventListener('click', e => {
             console.log(e.message);
         });
 });
+btnFacebook.addEventListener('click', e => {
+    const auth = firebase.auth();
+    const fb = new firebase.auth.FacebookAuthProvider();
+    auth.signInWithPopup(fb)
+        .then(() => {
+            window.location.assign('calculator');
+        })
+        .catch(error =>{
+            console.error(error);
+        })
+});
+
+btnGoogle.addEventListener('click', e => {
+    const auth = firebase.auth();
+    const gg = new firebase.auth.GoogleAuthProvider();
+    auth.signInWithPopup(gg)
+        .then(() => {
+            window.location.assign('calculator');
+        })
+        .catch(error =>{
+            console.error(error);
+        })
+});

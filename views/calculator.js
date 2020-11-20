@@ -15,29 +15,48 @@ firebase.initializeApp(firebaseConfig);
 
 var messagesRef = firebase.database().ref('calculation');
 
-//document.getElementById('calcForm').addEventListener('submit', submitForm);
+document.getElementById('calcForm').addEventListener('submit', submitForm);
 
 function submitForm(e){
-    e.preventDefault();
+    //e.preventDefault();
 
     var gender = getInputValName("gender");
     var married = getInputValName("married");
+    married = validateYesNo(married);
     var graduated = getInputValName("graduated");
+    graduated = validateYesNo(graduated);
     var selfEmployed = getInputValName("selfEmployed");
-    var income = getInputVal('income');
-    var coIncome = getInputVal('coIncome');
-    var amount = getInputVal('amount');
-    var time = getInputVal('time');
+    selfEmployed = validateYesNo(selfEmployed);
+    var income = +(getInputVal('income'));
+    var coIncome = +(getInputVal('coIncome'));
+    var amount = +(getInputVal('amount'));
+    var time = +(getInputVal('time'));
     var creditHistory = getInputValName("creditHistory");
-    var area = getInputVal('area');
+    creditHistory = validateYesNo(creditHistory);
+    var area = +(getInputVal('area'));
+    var dependants= +(getInputVal('dependants'));
+    if(gender === 'male') {
+        gender = 1;
+    }else if(gender === 'female'){
+        gender = 0;
+    }
 
-    saveMessage(gender, married, graduated, selfEmployed, income, coIncome, amount, time, creditHistory, area);
+    console.log(gender, married, graduated, selfEmployed, income, coIncome, amount, time, creditHistory, area, dependants);
+    saveMessage(gender, married, graduated, selfEmployed, income, coIncome, amount, time, creditHistory, area, dependants);
 }
 
 function getInputVal(id){
     return document.getElementById(id).value;
 }
 
+function validateYesNo(input){
+    if(input === 'yes') {
+        input = 1;
+    }else if(input === 'no'){
+        input = 0;
+    }
+    return input
+}
 function getInputValName(name){
     var temp = document.getElementsByName(name);
     for (var i = 0, length = temp.length; i < length; i++) {
@@ -47,7 +66,7 @@ function getInputValName(name){
     }
 }
 
-function saveMessage(gender, married, graduated, selfEmployed, income, coIncome, amount, time, creditHistory, area){
+function saveMessage(gender, married, graduated, selfEmployed, income, coIncome, amount, time, creditHistory, area, dependants){
     var newMessageRef = messagesRef.push();
     newMessageRef.set({
         gender: gender,
@@ -59,6 +78,17 @@ function saveMessage(gender, married, graduated, selfEmployed, income, coIncome,
         amount: amount,
         time: time,
         creditHistory: creditHistory,
-        area: area
+        area: area,
+        dependants: dependants
     });
 }
+btnlogoutFacebook.addEventListener('click', e => {
+    const auth = firebase.auth();
+    auth.signOut()
+        .then(() => {
+            window.location.assign('index.html');
+        })
+        .catch(error =>{
+            console.error(error);
+        })
+});
