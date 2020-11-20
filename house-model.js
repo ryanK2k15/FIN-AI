@@ -1,6 +1,6 @@
 const tf = require('@tensorflow/tfjs-node');
 
-const modelUrl = 'http://localhost:5000/house-pricer-js/model.json';
+const modelUrl = 'https://fin-ai-cit.herokuapp.com/house-pricer-js/model.json';
 
 let model;
 
