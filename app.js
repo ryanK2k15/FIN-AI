@@ -6,7 +6,7 @@ var model = require('./loan-model.js');// require model from loan-model.js
 var houseModel = require('./house-model.js');// require model from house-model.js
 const tf = require('@tensorflow/tfjs-node');
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 const app = express();
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/views'));
