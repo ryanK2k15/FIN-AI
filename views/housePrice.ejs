@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="navStyle.css">
+</head>
+
+
+
+<body>
+<style>
+.content {
+  text-align: center;
+}
+ul {
+  display: table;
+  margin: 0 auto;
+}
+.value {
+  margin: auto;
+  font-size: 20px;
+  text-align: center;
+  border-style: groove;
+  border-radius: 25px;
+  padding: 20px;
+  width: 1000px;
+  word-wrap: break-word
+	
+	}
+</style>
+<body>
+
+<div class="navbar">
+    <h1>FinAI</h1>
+    <a href="/login">Login</a>
+    <a href="/SignUp">Sign Up</a>
+    <a href="/home">Home</a>
+</div>
+
+<div class="content">
+	<h1>House Details</h1>
+
+	<ul>
+         <li>Bedrooms: <%-houseDetails[0]%></li>
+		  <li>Bathrooms: <%-houseDetails[1]%></li>
+		   <li>House Sqft: <%-houseDetails[2]%></li>
+		    <li>Lot Sqft: <%-houseDetails[3]%></li>
+			 <li>Floors: <%-houseDetails[4]%></li>
+			  <li>Condition: <%-houseDetails[7]%></li>
+			  <li>Waterfront: <%-houseDetails[5]%></li>			  
+				<li>View: <%-houseDetails[6]%></li>
+				 <li>Basement Sqft: <%-houseDetails[9]%></li>
+				 <li>Above Sqft: <%-houseDetails[8]%></li>
+				 <li>Year Built: <%-houseDetails[10]%></li>
+			    <li>Renovated: <%-houseDetails[11]%></li>
+				  
+    </ul>
+	
+	<br>
+	<div class="value">
+	<h1>House details have been analyzed and the FinAI Engine has determined that the house value is <u>€<%- value%></u></h1>
+	</div>
+      
+</div>
+
+ 
+		
+</body>
+</html>

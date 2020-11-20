@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="navStyle.css">
+</head>
+
+
+
+<body>
+<style>
+.content {
+  text-align: center;
+}
+ul {
+  display: table;
+  margin: 0 auto;
+}
+.qualify {
+  margin: auto;
+  font-size: 20px;
+  text-align: center;
+  border-style: groove;
+  border-radius: 25px;
+  padding: 20px;
+  width: 1000px;
+  word-wrap: break-word
+	
+	}
+</style>
+<body>
+
+<div class="navbar">
+    <h1>FinAI</h1>
+    <a href="/login">Login</a>
+    <a href="/SignUp">Sign Up</a>
+    <a href="/home">Home</a>
+</div>
+
+<div class="content">
+	<h1>Client Profile</h1>
+	<% if(profile[0] == 1){ %>
+	<%	   profile[0] = "male"; %>
+	<% } else{ %>  
+	<%	   profile[0] = "female" %>
+	<% } %>	
+	
+	<% if(profile[1] == 1){ %>
+	<%	   profile[1] = "married"; %>
+	<% } else{ %>  
+	<%	   profile[1] = "not married" %>
+	<% } %>
+	
+	<% if(profile[2] == 1){ %>
+	<%	   profile[2] = "graduate"; %>
+	<% } else{ %>  
+	<%	   profile[2] = "non-graduate" %>
+	<% } %>
+	
+	<% if(profile[3] == 1){ %>
+	<%	   profile[3] = "yes"; %>
+	<% } else{ %>  
+	<%	   profile[3] = "no" %>
+	<% } %>
+	
+	<% if(profile[8] == 1){ %>
+	<%	   profile[8] = "yes"; %>
+	<% } else{ %>  
+	<%	   profile[8] = "no" %>
+	<% } %>
+	
+	<% if(profile[9] == 1){ %>
+	<%	   profile[9] = "rural"; %>
+	<% } %>	
+	<% if(profile[9] == 2){ %>
+	<%	   profile[9] = "semiurban"; %>
+	<% } else{ %>  
+	<%	   profile[9] = "urban" %>
+	<% } %>
+		 
+	
+	<ul>
+         <li>Gender: <%-profile[0]%></li>
+		  <li>Marital Status: <%-profile[1]%></li>
+		   <li>Education: <%-profile[2]%></li>
+		    <li>Self Employed: <%-profile[3]%></li>
+			 <li>Applicant Income: <%-profile[4]%></li>
+			  <li>Co-applicant Income: <%-profile[5]%></li>
+			   <li>Loan Amount: <%-profile[6]%></li>
+			    <li>Loan Amount Term: <%-profile[7]%></li>
+				 <li>Credit History: <%-profile[8]%></li>
+				  <li>Propery Area: <%-profile[9]%></li>
+				   <li>No. of dependents: <%-profile[10]%></li>
+    </ul>
+	
+	<br>
+	<div class="qualify">
+	<h1>Client profile has been analyzed and the FinAI Engine has determined that they 
+			<% if(result){ %>
+			   <u>qualify</u>
+			 <% } else{ %>  
+			   <u>do not qualify</u>
+			<% } %>
+		for this loan amount</h1>
+	</div>
+      
+</div>
+
+ 
+		
+</body>
+</html>
