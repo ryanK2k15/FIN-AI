@@ -10,47 +10,14 @@ var firebaseConfig = {
     appId: "1:386537276659:web:c07be9a9f764a784b4a386",
     measurementId: "G-PJBCD6EHDH"
 };
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
-var messagesRef = firebase.database().ref('registrations');
 
 document.getElementById('signUpForm').addEventListener('submit', submitForm);
 
 function submitForm(e){
     e.preventDefault();
-
-    var email = getInputVal("email");
-    var password = getInputVal("password");
-    var name = getInputVal("name");
-    var lastName = getInputVal("lastName");
-    var address = getInputVal('address');
-    var number = getInputVal('number');
-    var company = getInputVal('company');
-    var username = getInputVal('username');
-
-    saveMessage(email, password, name, lastName, address, number, company, username);
-    const auth = firebase.auth();
-    const promise = auth.createUserWithEmailAndPassword(email, password);
-    promise.catch(e => console.log(e.message));
-}
-
-function getInputVal(id){
-    return document.getElementById(id).value;
-}
-
-function saveMessage(email, password, name, lastName, address, number, company, username){
-    var newMessageRef = messagesRef.push();
-    newMessageRef.set({
-        email: email,
-        password: password,
-        name: name,
-        lastName: lastName,
-        address: address,
-        number: number,
-        company: company,
-        username: username
-    });
 }
 
 btnLog.addEventListener('click', e => {
@@ -67,12 +34,13 @@ btnLog.addEventListener('click', e => {
             console.log(e.message);
         });
 });
+
 btnFacebook.addEventListener('click', e => {
     const auth = firebase.auth();
     const fb = new firebase.auth.FacebookAuthProvider();
     auth.signInWithPopup(fb)
         .then(() => {
-            window.location.assign('calculator');
+            window.location.assign('calculator.html');
         })
         .catch(error =>{
             console.error(error);
@@ -84,7 +52,7 @@ btnGoogle.addEventListener('click', e => {
     const gg = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(gg)
         .then(() => {
-            window.location.assign('calculator');
+            window.location.assign('calculator.html');
         })
         .catch(error =>{
             console.error(error);
