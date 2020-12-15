@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FINAI</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="signStyle.css">
+
+</head>
+<body>
+<div id="page-container">
+    <div id="content-wrap">
+        <div class="navbar">
+            <div class="header">
+                <img src="coin1.png" />
+                <a href="index.html"/>
+                <h1>FinAI</h1>
+            </div>
+            <a href="/login">Login</a>
+            <a href="/SignUp">Sign Up</a>
+            <a href="/home">Home</a>
+        </div>
+
+
+        <div class="container">
+        <div class="mainForm">
+            <h1>Register your account</h1>
+            <form id="signUpForm">
+                <p>
+                    <input type="email" name="email" id="email" required placeholder="E-mail address">
+                </p>
+                <p>
+                    <input type="email" name="confirmedEmail" id="confirmedEmail" required placeholder="Confirm E-mail address">
+                </p>
+                <p>
+                    <input type="password" name="password" id="password" placeholder="Password">
+                </p>
+                <p>
+                    <input type="password" name="repeatPassword" id="repeatPassword" required placeholder="Confirm Password">
+                </p>
+                <p>
+                    <input type="text" name="name" id="name" required placeholder="First Name">
+                </p>
+                <p>
+                    <input type="text" name="lastName" id="lastName" required placeholder="Last Name">
+                </p>
+                <p>
+                    <input type="text" name="address" id="address" required placeholder="Address">
+                </p>
+                <p>
+                    <input type="text" name="number" id="number" required placeholder="Phone Number">
+                </p>
+                <p>
+                    <input type="text" name="company" id="company" required placeholder="Company">
+                </p>
+                <p>
+                    <input type="text" name="username" id="username" required placeholder="Username">
+                </p>
+                <div class="login">
+                <p>
+                    <input type="image" id="signUp" src="btnReg.jpg" alt="submit"/>
+                </p>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase.js"></script>
+<script src="signup.js"></script>
+<div class="footer">
+    <h1><i class="fa fa-road"></i> 1 Patrick Street</h1>
+    <h1><i class="fa fa-phone"></i> (353)1111111</h1>
+    <h1><i class="fa fa-envelope"></i> FINAI@mycit.ie</h1>
+</div>
+</div>
+</body>
+</html>

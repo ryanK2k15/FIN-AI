@@ -1,0 +1,106 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<title>FinAI - ML Reports</title>
+<link rel="icon" href="coin1.png">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="reportStyle.css">
+</head>
+<body>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+        intent="WELCOME"
+        chat-title="FinAI Chatbot"
+        agent-id="8cff4500-0ac2-4112-b287-0cacdb75aa18"
+        language-code="en"
+></df-messenger>
+<div class="navbar">
+    <div class="header">
+        <img src="coin1.png" />
+        <a href="index.html" />
+        <h1>FinAI</h1>
+    </div>
+    <a id="btnlogout" href="index.html">Log-Out</a>
+    <a href="clients.html">Client</a>
+    <a href="value.html">House Value</a>
+    <a href="qualify.html">Credit Eligibility</a>
+    <a href="ml-reports.html">ML-Report</a>
+    <div class="dropdown">
+        <button class="dropbtn">BI-Report
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="BIReportLoan.html">Loan</a>
+            <a href="BIReportHouseValue.html">House</a>
+        </div>
+    </div>
+</div>
+<div class="box">
+    <h1>Machine Learning Reports</h1>
+    <h2>Loan Suitability Model</h2>
+    <div class="row">
+        <div class="column">
+            <img src="/ml-charts/loan model accuracy.png" alt="The loan suitability model achieves an accuracy of 83%" id="img1" onclick="myFunction(id);">
+        </div>
+        <div class="column">
+            <img src="/ml-charts/loan model loss.png" alt="The loan suitability model has a loss of under 0.4" id="img2" onclick="myFunction(id);">
+        </div>
+    </div>
+    <div class="container">
+        <!-- Close the image -->
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+        <!-- Expanded image -->
+        <img id="expandedImg" style="width:100%">
+
+        <!-- Image text -->
+        <div id="imgtext"></div>
+    </div>
+    <h2>House Price Model</h2>
+    <div class="row">
+        <div class="column">
+            <img src="/ml-charts/house price model accuracy.png" alt="The house price model has a mean absolute error of under 150,000" id="img3" onclick="myFunction(id);">
+        </div>
+        <div class="column">
+            <img src="/ml-charts/house price model loss.png" alt="The house price model has a mean absolute percentage error of 25%" id="img4" onclick="myFunction(id);">
+        </div>
+    </div>
+
+    <!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+<script>
+function myFunction(imgs) {
+	// Get the modal
+	var modal = document.getElementById("myModal");
+
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var img = document.getElementById(imgs);
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+	}
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() { 
+	  modal.style.display = "none";
+	}
+}
+</script>
+</div>
+</body>
+<div class="footer">
+    <h1><i class="fa fa-road"></i> 1 Patrick Street</h1>
+    <h1><i class="fa fa-phone"></i> (353)1111111</h1>
+    <h1><i class="fa fa-envelope"></i> FINAI@mycit.ie</h1>
+</div>
+ </html>

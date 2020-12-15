@@ -1,0 +1,535 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: 'segoe ui';
+}
+.header img {
+    float: left;
+    width: 40px;
+    height: 40px;
+    background: #000;
+}
+
+.header h1 {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+/* Slider */
+#slider{
+    width:100%;
+    height:500px;
+    position:relative;
+    overflow:hidden;
+}
+.slides{
+    width:400%;
+    height:100%;
+    position:relative;
+    -webkit-animation:slide 30s infinite;
+    -moz-animation:slide 30s infinite;
+    animation:slide 30s infinite;
+}
+.slider{
+    width:25%;
+    height:100%;
+    float:left;
+    position:relative;
+    z-index:1;
+    overflow:hidden;
+}
+.slide img{
+    width:100%;
+    height:100%;
+}
+.slide img{
+    width:100%;
+    height:100%;
+}
+.image{
+    width:100%;
+    height:100%;
+}
+.image img{
+    width:100%;
+    height:100%;
+}
+
+.legend{
+    border:500px solid transparent;
+    border-left:800px solid rgba(52, 73, 94, .7);
+    border-bottom:0;
+    position:absolute;
+    bottom:0;
+}
+
+.content{
+    width:100%;
+    height:100%;
+    position:absolute;
+    overflow:hidden;
+}
+
+.content-txt{
+    width:400px;
+    height:150px;
+    float:left;
+    position:relative;
+    top:300px;
+    -webkit-animation:content-s 7.5s infinite;
+    -moz-animation:content-s 7.5s infinite;
+    animation:content-s 7.5s infinite;
+}
+
+.content-txt h2{
+    font-family:Arial;
+    text-transform:uppercase;
+    font-size:24px;
+    color:#fff;
+    text-align:left;
+    margin-left:30px;
+    padding-bottom:10px;
+}
+
+.content-txt p{
+    font-family:arial;
+    font-weight:normal;
+    font-size:14px;
+    font-style:italic;
+    color:#fff;
+    text-align:left;
+    margin-left:30px;
+}
+
+.switch{
+    width:120px;
+    height:10px;
+    position:absolute;
+    bottom:50px;
+    z-index:99;
+    left:30px;
+}
+
+.switch > ul{
+    list-style:none;
+}
+
+.switch > ul > li{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#333;
+    float:left;
+    margin-right:5px;
+    cursor:pointer;
+}
+
+.switch ul{
+    overflow:hidden;
+}
+
+.on{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    background:#f39c12;
+    position:relative;
+    -webkit-animation:on 30s infinite;
+    -moz-animation:on 30s infinite;
+    animation:on 30s infinite;
+}
+
+@-webkit-keyframes slide{
+    0%,100%{
+        margin-left:0%;
+    }
+    21%{
+        margin-left:0%;
+    }
+    25%{
+        margin-left:-100%;
+    }
+    46%{
+        margin-left:-100%;
+    }
+    50%{
+        margin-left:-200%;
+    }
+    71%{
+        margin-left:-200%;
+    }
+    75%{
+        margin-left:-300%;
+    }
+    96%{
+        margin-left:-300%;
+    }
+}
+@-moz-keyframes slide{
+    0%,100%{
+        margin-left:0%;
+    }
+    21%{
+        margin-left:0%;
+    }
+    25%{
+        margin-left:-100%;
+    }
+    46%{
+        margin-left:-100%;
+    }
+    50%{
+        margin-left:-200%;
+    }
+    71%{
+        margin-left:-200%;
+    }
+    75%{
+        margin-left:-300%;
+    }
+    96%{
+        margin-left:-300%;
+    }
+}
+@keyframes slide{
+    0%,100%{
+        margin-left:0%;
+    }
+    21%{
+        margin-left:0%;
+    }
+    25%{
+        margin-left:-100%;
+    }
+    46%{
+        margin-left:-100%;
+    }
+    50%{
+        margin-left:-200%;
+    }
+    71%{
+        margin-left:-200%;
+    }
+    75%{
+        margin-left:-300%;
+    }
+    96%{
+        margin-left:-300%;
+    }
+}
+
+@-webkit-keyframes content-s{
+    0%{left:-420px;}
+    10%{left:0px;}
+    30%{left:0px;}
+    40%{left:0px;}
+    50%{left:0px;}
+    60%{left:0px;}
+    70%{left:0;}
+    80%{left:-420px;}
+    90%{left:-420px;}
+    100%{left:-420px;}
+}
+@-moz-keyframes content-s{
+    0%{left:-420px;}
+    10%{left:0px;}
+    30%{left:0px;}
+    40%{left:0px;}
+    50%{left:0px;}
+    60%{left:0px;}
+    70%{left:0;}
+    80%{left:-420px;}
+    90%{left:-420px;}
+    100%{left:-420px;}
+}
+@keyframes content-s{
+    0%{left:-420px;}
+    10%{left:20px;}
+    15%{left:0px;}
+    30%{left:0px;}
+    40%{left:0px;}
+    50%{left:0px;}
+    60%{left:0px;}
+    70%{left:0;}
+    80%{left:-420px;}
+    90%{left:-420px;}
+    100%{left:-420px;}
+}
+
+@-webkit-keyframes on{
+    0%,100%{
+        margin-left:0%;
+    }
+    21%{
+        margin-left:0%;
+    }
+    25%{
+        margin-left:15px;
+    }
+    46%{
+        margin-left:15px;
+    }
+    50%{
+        margin-left:30px;
+    }
+    71%{
+        margin-left:30px;
+    }
+    75%{
+        margin-left:45px;
+    }
+    96%{
+        margin-left:45px;
+    }
+}
+
+@-moz-keyframes on{
+    0%,100%{
+        margin-left:0%;
+    }
+    21%{
+        margin-left:0%;
+    }
+    25%{
+        margin-left:15px;
+    }
+    46%{
+        margin-left:15px;
+    }
+    50%{
+        margin-left:30px;
+    }
+    71%{
+        margin-left:30px;
+    }
+    75%{
+        margin-left:45px;
+    }
+    96%{
+        margin-left:45px;
+    }
+}
+
+@keyframes on{
+    0%,100%{
+        margin-left:0%;
+    }
+    21%{
+        margin-left:0%;
+    }
+    25%{
+        margin-left:15px;
+    }
+    46%{
+        margin-left:15px;
+    }
+    50%{
+        margin-left:30px;
+    }
+    71%{
+        margin-left:30px;
+    }
+    75%{
+        margin-left:45px;
+    }
+    96%{
+        margin-left:45px;
+    }
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #000000;
+    top: 0;
+    width: 100%;
+}
+
+.navbar a {
+    float: right;
+    display: block;
+    color: #eeeeee;
+    padding: 15px 5px 5px 5%;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #1c87c9;
+}
+
+.navbar h1 {
+    font-size: 15px;
+    color: #eeeeee;
+    padding-left: 5%;
+    float: left;
+    text-align: left;
+}
+
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 15px 5px 5px 5%;
+    background-color: inherit;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.container {
+    padding: 0 5% 5% 5%;
+    margin-top: 100px;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+    overflow: scroll;
+}
+
+.point {
+    background-color: whitesmoke;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-right: 40%;
+    width: 80%;
+    height: auto;
+}
+
+.point h1 {
+    color: #7c795d;
+    font-family: 'Trocchi', serif;
+    font-size: 45px;
+    font-weight: normal;
+    line-height: 48px; margin: 0;
+}
+
+.point h2 {
+    color: #7c795d;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    line-height: 32px;
+    margin: 0 0 24px;
+}
+
+.point p {
+    color: #000000;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    margin: 0 0 24px;
+}
+
+.point a {
+    color: #ff9900;
+    background: #fff4a3;
+    text-decoration: none;
+}
+
+.point a:hover {
+    color: #ffcc66
+}
+
+.pointRight {
+    margin-top: 2%;
+    background-color: whitesmoke;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 40%;
+    width: 80%;
+    height: auto;
+}
+
+.pointRight h1 {
+    color: #7c795d;
+    font-family: 'Trocchi', serif;
+    font-size: 45px;
+    font-weight: normal;
+    line-height: 48px; margin: 0;
+}
+
+.pointRight h2 {
+    color: #7c795d;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    line-height: 32px;
+    margin: 0 0 24px;
+}
+
+.pointRight p {
+    color: #000000;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    margin: 0 0 24px;
+}
+
+.pointRight a {
+    color: #ff9900;
+    background: #fff4a3;
+    text-decoration: none;
+}
+
+.pointRight a:hover {
+    color: #ffcc66
+}
+
+.footer {
+    background-color: #333333;
+    width: 90%;
+    margin: 0 5% 0 5%;
+    float: left;
+}
+.footer h1 {
+    float: left;
+    width: 15%;
+    align: left;
+    text-align: left;
+    display: block;
+    color: #eeeeee;
+    padding: 5px 5px 5px 5px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}

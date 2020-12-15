@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>FinAI - House Value</title>
+<link rel="icon" href="coin1.png">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="signStyle.css">
+</head>
+<style>
+h1 {
+  text-align: center;
+}
+.content {
+  text-align: left;
+}
+ul {
+  display: table;
+  margin: 0 auto;
+}
+.value {
+  margin: auto;
+  font-size: 20px;
+  text-align: center;
+  border-style: groove;
+  border-radius: 25px;
+  padding: 20px;
+  width: 1000px;
+  word-wrap: break-word
+	
+}
+</style>
+<style>
+.header img {
+  float: left;
+  width: 50px;
+  height: 50px;
+  background: #000;
+}
+
+.header h1 {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+</style>
+<body>
+<div class="navbar">
+	<div class="header">
+		  <img src="coin1.png" />
+		  <a href="index.html" />
+		  <h1>FinAI</h1>
+	</div>
+	<a id="btnlogout" href="index.html">Log-Out</a>
+	<a href="clients.html">Clients</a>
+	<a href="value.html">House Value</a>
+	<a href="qualify.html">Credit Eligibility</a>
+	<a href="ml-reports.html">ML-Report</a>
+	<div class="dropdown">
+		<button class="dropbtn">BI-Report
+			<i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+			<a href="BIReportLoan.html">Loan</a>
+			<a href="BIReportHouseValue.html">House</a>
+		</div>
+	</div>
+</div>
+
+<div class="content">
+	<h1>House Details</h1>
+	<ul>
+		<li>Bedrooms: <%-houseDetails[0]%></li>
+		<li>Bathrooms: <%-houseDetails[1]%></li>
+		<li>House Sqft: <%-houseDetails[2]%></li>
+		<li>Lot Sqft: <%-houseDetails[3]%></li>
+		<li>Floors: <%-houseDetails[4]%></li>
+		<li>Condition: <%-houseDetails[7]%></li>
+		<li>Grade: <%-houseDetails[8]%></li>
+		<li>Waterfront: <%-houseDetails[5]%></li>
+		<li>View: <%-houseDetails[6]%></li>
+		<li>Basement Sqft: <%-houseDetails[10]%></li>
+		<li>Above Sqft: <%-houseDetails[9]%></li>
+		<li>Year Built: <%-houseDetails[11]%></li>
+		<li>Renovated: <%-houseDetails[12]%></li>
+		<li>Lat: <%-houseDetails[13]%></li>
+		<li>Long: <%-houseDetails[14]%></li>
+    </ul>
+	<br>
+	<div class="value">
+		<h2>House details have been analyzed and the FinAI Engine has determined that the house value is <u>$<%- value%></u></h2>
+	</div>
+</div>
+<div class="footer">
+	<h1><i class="fa fa-road"></i> 1 Patrick Street</h1>
+	<h1><i class="fa fa-phone"></i> (353)1111111</h1>
+	<h1><i class="fa fa-envelope"></i> FINAI@mycit.ie</h1>
+</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>FinAI - BI Reports/House</title>
+<link rel="icon" href="coin1.png">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="BIreportStyle.css">
+</head>
+<body>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+        intent="WELCOME"
+        chat-title="FinAI Chatbot"
+        agent-id="8cff4500-0ac2-4112-b287-0cacdb75aa18"
+        language-code="en"
+></df-messenger>
+<div class="navbar">
+    <div class="header">
+        <img src="coin1.png" />
+        <a href="index.html" />
+        <h1>FinAI</h1>
+    </div>
+    <a id="btnlogout" href="index.html">Log-Out</a>
+    <a href="clients.html">Client</a>
+    <a href="value.html">House Value</a>
+    <a href="qualify.html">Credit Eligibility</a>
+    <a href="ml-reports.html">ML-Report</a>
+    <div class="dropdown">
+        <button class="dropbtn">BI-Report
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="BIReportLoan.html">Loan</a>
+            <a href="BIReportHouseValue.html">House</a>
+        </div>
+    </div>
+</div>
+<div class="box">
+    <h1>House Value Charts </h1>
+	<h2>Click on a chart to expand it</h2>
+    <div class="row">
+        <div class="column">
+            <img src="/ml-charts/price_sqft_cond.png" alt="The size of the house has a great effect on the value" id="img1" onclick="myFunction(id);">
+        </div>
+        <div class="column">
+            <img src="/ml-charts/price vs lot.png" alt="The size of the lot has a great effect on the value" id="img2" onclick="myFunction(id);">
+        </div>
+        <div class="column">
+            <img src="/ml-charts/price vs bedrooms.png" alt="The effect the number of bedrooms has on price" id="img3" onclick="myFunction(id);">
+        </div>
+        <div class="column">
+            <img src="/ml-charts/price vs bathrooms.png" alt="The effect the number of bathrooms has on price" id="img4" onclick="myFunction(id);">
+        </div>
+        <div class="column">
+            <img src="/ml-charts/price vs condition.png" alt="The condition of the house and the effect it has on the value" id="img5" onclick="myFunction(id);">
+        </div>
+        <div class="column">
+            <img src="/ml-charts/price vs floors.png"  alt="The effect the number of floors has on price" id="img6" onclick="myFunction(id);">
+        </div>
+    </div>
+</div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+<script>
+function myFunction(imgs) {
+	// Get the modal
+	var modal = document.getElementById("myModal");
+
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var img = document.getElementById(imgs);
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+	}
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() { 
+	  modal.style.display = "none";
+	}
+}
+</script>
+<div class="footer">
+    <h1><i class="fa fa-road"></i> 1 Patrick Street</h1>
+    <h1><i class="fa fa-phone"></i> (353)1111111</h1>
+    <h1><i class="fa fa-envelope"></i> FINAI@mycit.ie</h1>
+</div>
+</body>
+</html>

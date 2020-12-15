@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>FinAI - House Value</title>
+<link rel="icon" href="coin1.png">
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>FINAI</title>
+            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+            <link rel="stylesheet" href="formStyle.css">
+<body>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+        intent="WELCOME"
+        chat-title="FinAI Chatbot"
+        agent-id="8cff4500-0ac2-4112-b287-0cacdb75aa18"
+        language-code="en"
+></df-messenger>
+<div id="page-container">
+    <div id="content-wrap">
+        <div class="navbar">
+            <div class="header">
+                <img src="coin1.png" />
+                <a href="index.html" />
+                <h1>FinAI</h1>
+            </div>
+            <a  id="btnlogout" href="index.html"><div class="userName"></div> Log-Out</a>
+            <a href="clients.html">Client</a>
+            <a href="value.html">House Value</a>
+            <a href="qualify.html">Credit Eligibility</a>
+            <a href="ml-reports.html">ML-Report</a>
+            <div class="dropdown">
+                <button class="dropbtn">BI-Report
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="BIReportLoan.html">Loan</a>
+                    <a href="BIReportHouseValue.html">House</a>
+                </div>
+            </div>
+        </div>
+        <img width="100%" src="forSale.jpg">
+        <div class="container">
+            <div class="mainForm">
+
+                <form id="valueForm" action="value" method="post">
+                    <h2>Check value of the house!</h2>
+                    <div class="question">
+                        <p>
+                        <div class="title">
+                            <label><b>NO. OF BEDROOMS:</b></label>
+                        </div>
+                        <div class="radio">
+                            <input type="text" name="bedrooms" id="bedrooms" required>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="question">
+                        <p>
+                        <div class="title">
+                            <label><b>NO. OF BATHROOMS:</b></label>
+                        </div>
+                        <div class="radio">
+                            <input type="text" name="bathrooms" id="bathrooms" required>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="question">
+                        <p>
+                        <div class="title">
+                            <label><b>SQUARE FOOTAGE OF HOUSE:</b></label>
+                        </div>
+                        <div class="radio">
+                            <input type="text" name="sqfliving" id="sqfliving" required>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="question">
+                        <p>
+                        <div class="title">
+                            <label><b>SQUARE FOOTAGE OF LOT:</b></label>
+                        </div>
+                        <div class="radio">
+                            <input type="text" name="sqflot" id="sqflot" required>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="question">
+                        <p>
+                        <div class="title">
+                            <label><b>NO. FLOORS:</b></label>
+                        </div>
+                        <div class="radio">
+                            <input type="text" name="floors" id="floors" required>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="question">
+                        <p>
+                        <div class="title">
+                            <label><b>CONDITION (1 - 5):</b></label>
+                        </div>
+                        <div class="radio">
+                            <input type="text" name="condition" id="condition" required>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="question">
+                        <p>
+                        <div class="title">
+                            <label><b>GRADE ( 1 - 13):</b></label>
+                        </div>
+                        <div class="radio">
+                            <input type="text" name="grade" id="grade" required>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="question">
+                        <p>
+                        <div class="title">
+                            <label><b>YEAR BUILT:</b></label>
+                        </div>
+                        <div class="radio">
+                            <input type="text" name="yrBuilt" id="yrBuilt" required>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="question">
+                        <p>
+                        <div class="title">
+                            <label><b>LAST RENOVATED:</b></label>
+                        </div>
+                        <div class="radio">
+                            <input type="text" name="renovated" id="renovated" required>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="question">
+                        <p>
+                        <div class="title">
+                            <label><b>BASEMENT SQUARE FOOTAGE:</b></label>
+                        </div>
+                        <div class="radio">
+                            <input type="text" name="belowSqFt" id="belowSqFt" required>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="question">
+                        <p>
+                        <div class="title">
+                            <label><b>WATERFRONT:</b></label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="waterfront" value="1" id="waterfront" required> <label>Yes</label>
+                            <input type="radio" name="waterfront" value="0"> <label>No</label>
+                        </div>
+                        </p>
+                    </div>
+					<div class="question">
+                        <p>
+                        <div class="title">
+                            <label><b>VIEW QUALITY(0 - 4):</b></label>
+                        </div>
+                        <div class="radio">
+                            <input type="text" name="view" id="view" required>
+                        </div>
+                        </p>
+                    </div>
+					<div class="question">
+                        <p>
+                        <div class="title">
+                            <label><b>LAT (47.xxx):</b></label>
+                        </div>
+                        <div class="radio">
+                            <input type="text" name="lat" id="lat" required>
+                        </div>
+                        </p>
+                    </div>
+					<div class="question">
+                        <p>
+                        <div class="title">
+                            <label><b>LONG (-122.xxx):</b></label>
+                        </div>
+                        <div class="radio">
+                            <input type="text" name="long" id="long" required>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="login">
+                        <input type="image" id="submit" src="btnSub.jpg">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase.js"></script>
+    <script src="houseValue.js"></script>
+    <div class="footer">
+        <h1><i class="fa fa-road"></i> 1 Patrick Street</h1>
+        <h1><i class="fa fa-phone"></i> (353)1111111</h1>
+        <h1><i class="fa fa-envelope"></i> FINAI@mycit.ie</h1>
+    </div>
+</div>
+</body>
+</html>
+
